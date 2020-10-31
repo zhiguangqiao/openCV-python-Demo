@@ -4,6 +4,9 @@
 高通滤波器
 两个自定义卷积 实现高通滤波，分别为 3x3核 和 5x5核
 结果证明 原图 减去 高斯模糊后的图 高通滤波效果更好
+
+原图 - GaussianBlur 就是高通滤波器
+GaussianBlur 就是典型的 低通滤波器
 '''
 import cv2
 import numpy as np
@@ -27,7 +30,7 @@ cv2.imshow('3x3', k3)
 cv2.imshow('5x5', k5)
 
 cv2.imshow('img', img)
-
+cv2.imshow('blurred', blurred)
 cv2.imshow('g_hpf', g_hpf)
 cv2.waitKey(0)
 cv2.destroyAllWindows
